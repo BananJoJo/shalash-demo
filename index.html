@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#111710">
+<title>Шалаш — концепт онлайн-меню кафе в Аргуне</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="cart.js"></script>
+</head>
+<body>
+<header class="wrap top"><a class="brand" href="./"><span aria-hidden="true">⌂</span> ШАЛАШ</a><nav aria-label="Навигация"><a href="#menu">Меню</a><a href="#contacts">Контакты</a></nav></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="title">
+<div class="copy">
+<h1 id="title">Горячее<br>с огня<span>.</span></h1>
+<p>Кафе «Шалаш» в Аргуне. Выберите блюда и посмотрите, как будет выглядеть готовый заказ.</p>
+<a class="button" href="#menu">Собрать заказ <span aria-hidden="true">↓</span></a>
+</div>
+<div class="scene" aria-hidden="true">
+<img src="grill.svg" width="520" height="440" alt="">
+<span class="ember"></span><span class="ember"></span><span class="ember"></span>
+</div>
+</section>
+<section class="menu" id="menu" tabindex="-1" aria-labelledby="menu-title">
+<div class="section-head"><h2 id="menu-title">Что на огне?</h2><p>Блюда и цены для демонстрации</p></div>
+<div class="tiles">
+<article data-price="360"><h3>Шашлык из курицы</h3><p>Зелень и маринованный лук</p><div class="dish-action"><strong>360 ₽</strong><button type="button">Добавить</button></div></article>
+<article data-price="390"><h3>Люля-кебаб</h3><p>С луком и лавашом</p><div class="dish-action"><strong>390 ₽</strong><button type="button">Добавить</button></div></article>
+<article data-price="330"><h3>Крылышки на гриле</h3><p>Румяные крылышки со специями</p><div class="dish-action"><strong>330 ₽</strong><button type="button">Добавить</button></div></article>
+<article data-price="260"><h3>Шаурма с курицей</h3><p>Курица, овощи и соус</p><div class="dish-action"><strong>260 ₽</strong><button type="button">Добавить</button></div></article>
+<article data-price="320"><h3>Бургер с котлетой</h3><p>Овощи, сыр и соус</p><div class="dish-action"><strong>320 ₽</strong><button type="button">Добавить</button></div></article>
+<article data-price="150"><h3>Картофель фри</h3><p>Хрустящий гарнир</p><div class="dish-action"><strong>150 ₽</strong><button type="button">Добавить</button></div></article>
+</div>
+</section>
+<section class="visit" id="contacts" aria-labelledby="visit-title">
+<div><h2 id="visit-title">Где нас найти</h2><p>Аргун, улица Аксатемирова, 25д</p></div>
+<a class="link" href="https://wa.me/79896789975" target="_blank" rel="noopener noreferrer">Написать в кафе ↗</a>
+</section>
+</main>
+<footer class="wrap footer"><strong>Кафе «Шалаш»</strong><span>Демонстрация онлайн-меню</span></footer>
+<button type="button" class="button cart-open" id="cart-open" aria-haspopup="dialog" hidden>Корзина <span id="cart-summary"></span></button>
+<span class="sr-only" role="status" id="cart-status"></span>
+<dialog id="cart" aria-labelledby="cart-title">
+<div class="cart-head"><h2 id="cart-title">Корзина</h2><form method="dialog"><button aria-label="Закрыть корзину" autofocus>×</button></form></div>
+<p id="cart-empty">Корзина пока пуста.</p>
+<ul id="cart-items"></ul>
+<div id="cart-checkout" hidden><p class="cart-total">Сумма блюд <strong id="cart-total"></strong></p>
+<button type="button" class="button" id="order-preview" aria-expanded="false" aria-controls="order-draft">Показать текст заказа</button>
+<div id="order-draft" hidden><pre id="order-text"></pre><p>В демо заказ не отправляется.</p></div></div>
+</dialog>
+</body>
+</html>
